@@ -1,5 +1,4 @@
 fastapi[all]
 uvicorn[standart]
 sqlalchemy
-asyncpg
 psycopg2
