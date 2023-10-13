@@ -1,0 +1,24 @@
+version: '3.8'
+
+services:
+  web:
+    build: .
+    command: uvicorn quiz.main:app --host 0.0.0.0 --reload
+    volumes:
+      - ./quiz:/app/quiz
+    ports:
+      - "8000:8000"
+    depends_on:
+      - db
+    env_file:
+      - ./.env
+
+  db:
+    image: postgres:13.0-alpine
+    volumes:
+      - db_value:/var/lib/postgresql/data/
+    env_file:
+      - ./.env
+
+volumes:
+  db_value:

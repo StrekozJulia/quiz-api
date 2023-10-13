@@ -1,5 +1,5 @@
 from datetime import datetime
-from pydantic import BaseModel
+from pydantic import BaseModel, PositiveInt
 
 
 class QuestSchema(BaseModel):
@@ -11,8 +11,8 @@ class QuestSchema(BaseModel):
     added_at: datetime
 
     class Config:
-        orm_mode = True
+        from_attributes = True
 
 
 class QuestNum(BaseModel):
-    questions_num: int
+    questions_num: PositiveInt
