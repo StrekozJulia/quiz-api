@@ -49,7 +49,10 @@ URL: http://127.0.0.1.8000/generate_quiz/
 
 Тип запроса: POST (доступно любому пользователю)
 
-Request body: {"questions_num": integer}
+Request body: 
+```
+{"questions_num": integer}
+```
 
 Response: "QuestModel"
 ```
