@@ -46,9 +46,13 @@ docker compose up
 ## Доступные запросы к API:
 
 URL: http://127.0.0.1.8000/generate_quiz/
+
 Тип запроса: POST (доступно любому пользователю)
+
 Request body: {"questions_num": integer}
+
 Response: "QuestModel"
+```
 {
     "id": integer;
     "question_id": integer;
@@ -57,5 +61,5 @@ Response: "QuestModel"
     "created_at": datetime;
     "added_at": datetime
 }
-
+```
 
