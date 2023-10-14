@@ -29,12 +29,14 @@
 - Клонируйте репозиторий на свой компьютер:
 ```
 git clone git@github.com:StrekozJulia/quiz-api.git
+```
 
 - Переименуйте содержащийся в репозитории файл .env.example в .env и подставьте необходимые значения переменных окружения (либо оставьте значения по умолчанию, прописанные в файле).
 
 - Запустите сборку docker-контейнеров:
 ```
 docker compose up
+```
 
 После разворачивания контейнеров сервис будет доступен для POST-запросов по локальному адресу http://127.0.0.1:8000/generate_quiz/.
 
@@ -44,16 +46,16 @@ docker compose up
 ## Доступные запросы к API:
 
 + URL: http://127.0.0.1.8000/generate_quiz/
-  Тип запроса: POST (доступно любому пользователю)
-  Request body: {"questions_num": integer}
-  Response: "QuestModel"
-  {
-    "id": integer;
-    "question_id": integer;
-    "question": string;
-    "answer": string
-    "created_at": datetime
-    "added_at": datetime
-  }
+    Тип запроса: POST (доступно любому пользователю)
+    Request body: {"questions_num": integer}
+    Response: "QuestModel"
+    {
+        "id": integer;
+        "question_id": integer;
+        "question": string;
+        "answer": string
+        "created_at": datetime
+        "added_at": datetime
+    }
 
 
